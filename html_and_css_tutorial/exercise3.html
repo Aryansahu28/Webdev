@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+
+        .container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            padding: 5px;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(234 239 241);
+
+        }
+
+        .box {
+            margin: auto;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 5px #06060659;
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 25vw;
+            height: auto;
+        }
+
+        img {
+            border-radius: 10px;
+            margin-top: 7px;
+            margin-left: 9px;
+            margin-bottom: 5px;
+            width: 95%;
+            height: 35%;
+        }
+
+        ul li {
+            display: inline-block;
+            list-style-type: none;
+            border: 2px solid rgb(236, 230, 230);
+            color: rgb(73, 72, 72);
+            font-weight: 500;
+            border-radius: 15px;
+            padding: 1px 15px 2px 15px;
+            margin: 9px;
+        }
+
+        h1 {
+            margin: 9px;
+        }
+
+        .info {
+            margin: 9px;
+            color: rgb(73, 72, 72);
+        }
+
+        .readmore {
+            color:rgb(54 147 255);
+            border-radius: 20px;
+            border: 0.5px solid rgb(224 239 255);
+            background-color: rgb(224 239 255);
+            width: 115px;
+            /* padding: 15px; */
+            margin: 20px 20px 20px 115px;
+            text-align: center;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="man-in-boat.webp" alt="boat image">
+            <ul>
+                <li>Nature</li>
+                <li>Lake</li>
+            </ul>
+            <h1>Lago Di Braies</h1>
+            <div class="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum velit quod praesentium
+                placeat aliquid, expedita quae quidem nisi modi? Perspiciatis voluptatem autem quibusdam?</div>
+            <button class="readmore" type="button">Read more</button>
+        </div>
+    </div>
+</body>
+
+</html>

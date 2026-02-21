@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Color NavBar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --color: linear-gradient(0.25turn, #84ffc9, #aab2ff, #eca0ff);
+        }
+        nav{
+            background: var(--color);
+            border:2px;
+            padding:10px;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style-type: none;
+            padding: 5px 20px 5px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Sign In</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
