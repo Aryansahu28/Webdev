@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design template</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-radius: 5px;
+            display: flex;
+            width: 80vw;
+            gap: 10px;
+        }
+
+        .box h1 {
+            margin: 1px 2px 8px 1px;
+            font-size: 20px;
+        }
+
+
+        .img-box {
+            position: relative;
+            box-sizing: border-box;
+            width: 125px;
+            height: 75px;
+            border-radius: 4px;
+
+        }
+
+        .img-box img {
+            position: relative;
+            width: 125px;
+            height: 75px;
+            border-radius: 4px;
+        }
+
+        .text-on-img {
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid #0000000f;
+            background-color: #696565bf;
+            width: 43px;
+            right: 2px;
+            bottom: 1px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 900;
+
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            margin: -3px;
+        }
+
+        .footer {
+            display: flex;
+            font-size: 12px;
+            gap: 4px;
+
+        }
+
+        @media screen and (max-width:630px) {
+            .box h1 {
+                font-size: 15px;
+                margin: 2px 1px 4px 1px;
+            }
+
+            .footer {
+                font-size: 10px;
+                gap: 2px;
+
+            }
+
+            .img-box img {
+                position: relative;
+                width: 125px;
+                height: 75px;
+                border-radius: 4px;
+            }
+
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                margin: -3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+            <div class="img-box">
+                <img src="https://i.ytimg.com/vi/gRLdHSabW3o/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBOkIyACIrUQH4WItgmM-x89Ebw2Q"
+                    alt="image">
+                <div class="text-on-img">31:08</div>
+            </div>
+            <div class="sidebar">
+                <h1>JavaScript Exercise 13 - Dynamic Website Builder | Sigma Web Development Course - Tutorial #73</h1>
+                <div class="footer">
+                    <div class="cname">CodewithHarry</div>
+                    <div class="dot">•</div>
+                    <div class="views">720000</div><span>views</span>
+                    <div class="dot">•</div>
+                    <div class="timeline">2 months ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
