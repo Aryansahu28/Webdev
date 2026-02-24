@@ -25,4 +25,3 @@ document.querySelectorAll(".box").forEach(e =>{
     e.style.color=`${colors[calc_index_random]}`
 })  
 
-
