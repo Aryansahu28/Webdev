@@ -290,9 +290,32 @@ nav {
     bottom: 3px;
     left: 9px;
     width: 99%;
-    /* height: 8vh; */
-    background: linear-gradient(#e66465, #9198e5);
+    background: linear-gradient(135deg, #000000 0%, #001a0a 40%, #003d1a 75%, #00ff6a18 100%);
     border-radius: 7px;
+    border: 1px solid #00ff6a22;
+    box-shadow: 
+        0 0 20px #00ff6a15,
+        0 -4px 30px #00000080;
+    animation: footer-glow 4s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes footer-glow {
+    0%   { 
+        box-shadow: 0 0 20px #00ff6a15, 0 -4px 30px #00000080;
+        border-color: #00ff6a22;
+        background-position: 0% 50%;
+    }
+    50%  { 
+        box-shadow: 0 0 35px #00ff6a35, 0 -4px 30px #00000080;
+        border-color: #00ff6a55;
+        background-position: 100% 50%;
+    }
+    100% { 
+        box-shadow: 0 0 20px #00ff6a15, 0 -4px 30px #00000080;
+        border-color: #00ff6a22;
+        background-position: 0% 50%;
+    }
 }
 
 .twolines {
@@ -326,7 +349,10 @@ nav {
     border: none;
     border-radius: 5px;
     width: 70%;
-    background: linear-gradient(#222222, #121212);
+    background: #121212;
+    background-image: 
+        radial-gradient(ellipse 80% 40% at 50% -10%, #003d1a55, transparent),
+        radial-gradient(ellipse 40% 30% at 90% 50%, #00ff6a08, transparent);
     overflow-x: auto;
     overflow-y: auto;
     scroll-behavior: smooth;

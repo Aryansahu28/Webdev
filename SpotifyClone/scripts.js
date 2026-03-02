@@ -1,6 +1,8 @@
 
 
 console.log("let's start javascript")
+let currentAudio;
+let isPlay=false;
 
 async function getImages() {
     let a = await fetch("http://127.0.0.1:3000/assets/");
@@ -44,7 +46,7 @@ async function getSongs() {
 
 
 
-main()
+// main()
 
 let gridcontainer = document.body.querySelector(".gridcontainer")
 function creategridcard(images, artistnames, title) {
@@ -65,16 +67,45 @@ function creategridcard(images, artistnames, title) {
 
 async function main() {
     let images = await getImages()
-
     let songs = await getSongs()
     console.log(songs)
     console.log(images)
     console.log(images[0])
-    var audio = new Audio(songs[0]);
     // audio.play();
-    title = ["Aya Sher (from New Movie)(Telugu)", "Holi Mix Songs"]
-    artistnames = ["Renoadult dEsngseo sfeg,Kamini kumar", "Ravi Shankar, Charan Shankar , Kailash Kher"]
+    let title = ["Aya Sher (from New Movie)(Telugu)", "Holi Mix Songs"]
+    let artistnames = ["Renoadult dEsngseo sfeg,Kamini kumar", "Ravi Shankar, Charan Shankar , Kailash Kher"]
     console.log(title[0])
+    let songs1Btn  = document.querySelector(".songs1")   // grid card button
+    let playBtn    = document.querySelector(".play-btn img")
+
+    const icons = {
+        songs1: { play: "icons/play.svg",       pause: "icons/pause.svg" },
+        playBtn: { play: "icons/play-white.svg", pause: "icons/pause-white.svg" }
+    }
+
+    function togglePlay(songs){
+
+        
+        if (!currentAudio) {
+            currentAudio = new Audio(songs);
+        }
+    
+        if (isPlay) {
+            currentAudio.pause();
+            isPlay = false;
+            songs1Btn.querySelector("img").src = icons.songs1.play;   // swap icon back
+            playBtn.src = icons.playBtn.play
+        } else {
+            currentAudio.play();
+            isPlay = true;
+            songs1Btn.querySelector("img").src = icons.songs1.pause;   // swap icon back
+            playBtn.src = icons.playBtn.pause // swap to pause icon
+        }
+    
+      
+    }
+    songs1Btn.addEventListener('click',()=>togglePlay(songs[0]));
+    document.querySelector(".play-btn").addEventListener('click',()=>togglePlay(songs[0]))
     console.log(artistnames[0])
     for (let i = 0; i < 2; i++){
     console.log(images[i])
@@ -82,5 +113,10 @@ async function main() {
 
     }
 
-
+    for (let i =2; i<images.length;i++){
+        creategridcard(images[i],artistnames[0],title[0])
+    }
 }
+
+main()
+

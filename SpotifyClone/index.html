@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carddesign.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
     <title>Spotify</title>
@@ -75,9 +76,62 @@
                 <div class="secondline">We'll keep you updating about new episode</div>
                 <button class="thirdline">Browse Podcasts</button>
             </div>
+
+            <div class="card">
+
+                <!-- Wave 1: bright lime green, lower -->
+                <svg class="waves wave1" viewBox="0 0 1440 220" preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#00ff6a" stop-opacity="0.55" />
+                            <stop offset="100%" stop-color="#003d1a" stop-opacity="0.1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#g1)">
+                        <animate attributeName="d" dur="4s" repeatCount="indefinite" values="
+          M0,100 C180,60 360,150 540,100 C720,50 900,140 1080,100 C1260,60 1380,130 1440,100 L1440,220 L0,220 Z;
+          M0,110 C180,150 360,60 540,110 C720,160 900,70 1080,110 C1260,150 1380,80 1440,110 L1440,220 L0,220 Z;
+          M0,100 C180,60 360,150 540,100 C720,50 900,140 1080,100 C1260,60 1380,130 1440,100 L1440,220 L0,220 Z
+        " />
+                    </path>
+                </svg>
+
+                <!-- Wave 2: deeper emerald, upper -->
+                <svg class="waves wave2" viewBox="0 0 1440 220" preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#00c44f" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#001a0a" stop-opacity="0.05" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#g2)">
+                        <animate attributeName="d" dur="5.5s" repeatCount="indefinite" values="
+          M0,130 C200,80 400,170 600,120 C800,70 1000,160 1200,120 C1350,90 1420,140 1440,130 L1440,220 L0,220 Z;
+          M0,120 C200,160 400,80 600,130 C800,180 1000,90 1200,130 C1350,160 1420,100 1440,120 L1440,220 L0,220 Z;
+          M0,130 C200,80 400,170 600,120 C800,70 1000,160 1200,120 C1350,90 1420,140 1440,130 L1440,220 L0,220 Z
+        " />
+                    </path>
+                </svg>
+
+                <div class="card-content">
+                    <div>
+                        <div class="label">Now Playing</div>
+                        <div class="music-btn">
+                            <div class="backward-btn music-flow-btn"><img src="icons/backward.svg" alt="no"></div>
+                            <div class="play-btn music-flow-btn"><img src="icons/play-white.svg" alt="non"></div>
+                            <div class="forward-btn music-flow-btn"><img src="icons/forward.svg" alt="no"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
             <div class="footer">
                 <div class="fewlinksdata">
-
+    
                     <div class="footdata">Legal</div>
                     <div class="footdata">Safety & Privacy Center</div>
                     <div class="footdata">Privacy Policy</div>
@@ -93,56 +147,57 @@
             </div>
         </div>
 
+   
 
 
 
 
-        <div class="rightcontainer">
-            <div class="headbar">
-                <div class="headline-container">
-                    <div class="headline">Trending Songs</div>
-                    <div class="showall">show all</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="gridbox">
-                        <img src="assets/ab67616d00001e0248be563b0c9f1d7985a7c608.jpeg" alt="image"> <button
-                            class="playbutton"><img src="icons/play.svg" alt="play"></button>
-                        <div class="baseimagetitle">Aaya Sher(From "The Paradise")(Telugu)</div>
-                        <div class="artistnames">Anirudh Ravichander, Jangi Reddy, Arjun singh kappur</div>
-                    </div>
-                    
 
-                </div>
+    <div class="rightcontainer">
+        <div class="headbar">
+            <div class="headline-container">
+                <div class="headline">Trending Songs</div>
+                <div class="showall">show all</div>
             </div>
-            <div class="headbar">
-                <div class="headline-container">
-                    <div class="headline">Trending Songs</div>
-                    <div class="showall">show all</div>
+            <div class="gridcontainer">
+                <div class="gridbox">
+                    <img src="assets/ab67616d00001e0248be563b0c9f1d7985a7c608.jpeg" alt="image">
+                    <button class="playbutton songs1"><img src="icons/play.svg" alt="play"></button>
+                    <div class="baseimagetitle">Aaya Sher(From "The Paradise")(Telugu)</div>
+                    <div class="artistnames">Anirudh Ravichander, Jangi Reddy, Arjun singh kappur</div>
                 </div>
-                <div class="gridcontainer">
-                    <div class="gridbox circlegrid">
-                        <img src="assets/ab67616d00001e0248be563b0c9f1d7985a7c608.jpeg" alt="image"> <button
-                            class="playbutton"><img src="icons/play.svg" alt="play"></button>
-                        <div class="baseimagetitle">Aaya Sher(From "The Paradise")(Telugu)</div>
-                        <div class="artistnames">Anirudh Ravichander, Jangi Reddy, Arjun singh kappur</div>
-                    </div>
-                    
 
-                </div>
+
             </div>
         </div>
+        <div class="headbar">
+            <div class="headline-container">
+                <div class="headline">Trending Songs</div>
+                <div class="showall">show all</div>
+            </div>
+            <div class="gridcontainer">
+                <div class="gridbox circlegrid">
+                    <img src="assets/ab67616d00001e0248be563b0c9f1d7985a7c608.jpeg" alt="image"> <button
+                        class="playbutton"><img src="icons/play.svg" alt="play"></button>
+                    <div class="baseimagetitle">Aaya Sher(From "The Paradise")(Telugu)</div>
+                    <div class="artistnames">Anirudh Ravichander, Jangi Reddy, Arjun singh kappur</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
     </div>
 
 
-
+ </div>
     </div>
 
 
 
 
 
-    </div>
 
 
 
