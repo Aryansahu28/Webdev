@@ -1,12 +1,13 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose')
 const { Schema, model } = mongoose;
 
-const userSchemav= new Schema({
+
+const userSchema= new Schema({
   name: String,
   subject: String,
-  price: Int16Array
+  salary: Number
 
 });
 
-const Data = model('Data', userSchema);
-export default Data;
+const Data = mongoose.model('Data', userSchema);
+module.exports=Data
