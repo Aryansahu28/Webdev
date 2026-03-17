@@ -1,0 +1,12 @@
+body{
+  background-color: black;
+}
+
+.cards{
+  display: flex;
+  gap:10px;
+  height:auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

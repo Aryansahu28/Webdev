@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background-color: antiquewhite;
+    display: flex;
+    padding: 12px;
+}
+
+ul{
+    display: flex;
+    gap:15px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+ul li{
+    list-style-type: none;
+}

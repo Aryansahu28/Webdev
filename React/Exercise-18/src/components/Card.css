@@ -1,0 +1,28 @@
+.Card{
+    margin: 5px;
+    background-color: peru;
+    position: relative;
+    box-sizing: border-box;
+    border:2px solid black;
+    height:400px;
+    width: 300px;
+    text-align: center;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.userid{
+    position: absolute;
+    left:5px;
+    bottom:5px;
+}
+
+.description{
+    font-size: 8px;
+    overflow: hidden;
+}
+
