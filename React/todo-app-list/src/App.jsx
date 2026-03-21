@@ -87,14 +87,12 @@ function App() {
 
         <div className="bg-amber-400 min-h-100 lg:min-h-200 p-3 flex flex-col items-center w-[90vw] lg:w-[60vw] rounded-3xl">
           <h1 className='text-2xl text-center mb-7 font-bold'>Todo List</h1>
-          <div>
+          
+          <div className='flex flex-col gap-2 justify-center items-center'>
+          <div className='flex flex-col gap-2.5 justify-center items-center'>
 
-          </div>
-          <div className='flex lg:flex-row flex-col gap-2 '>
-          <div className='flex gap-2.5 justify-center'>
-
-            <input onChange={handleChange} value={todo} type="text" className='lg:min-w-xl h-6 bg-amber-50 rounded-md outline-none p-0.5' />
-            <button onClick={handleAdd} disabled={todo.length <= 3} className='w-12 h-6 text-sm rounded-2xl disabled:bg-amber-500 bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all mt-0.5'>Add</button>
+            <input onChange={handleChange} id="1" value={todo} type="text" className='lg:min-w-xl h-6 bg-amber-50 rounded-md outline-none p-0.5'/>
+            <button onClick={handleAdd} disabled={todo.length <= 3} className='w-40 h-8 text-base rounded-2xl disabled:bg-amber-500 bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all mt-0.5'>Add</button>
             </div>
             <div className='flex gap-1'>
 
@@ -108,16 +106,21 @@ function App() {
           <div className='m-5 font-bold'>My Todo List</div>
 
 
-          <div className='todolist flex flex-col gap-3 '>
+          <div className='todolist flex flex-col gap-3 w-full'>
             {todos.map(item => {
-              return (showFinished || item.isCompleted) && <div key={item.id} className='todo flex gap-1.5'>
+              return (showFinished || item.isCompleted) && <div key={item.id} className='todo flex gap-1.5 justify-around'>
+                <div className='flex gap-1.5'>
                 <input onClick={handleCheckbox} type="checkbox" value={item.isCompleted} name={item.id} className="w-4 h-4 m-1" />
-                <div className='lg:w-xl w-48 rounded-md p-0.5 bg-amber-200 wrap-break-word'>
-
+                <div className='lg:w-120 md:w-100 w-45 rounded-md p-0.5 bg-amber-400 wrap-break-word'>
                   <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
                 </div>
-                <button onClick={(e) => handleEdit(e, item.id)} className='lg:w-12 h-6 lg:text-sm w-9 text-xs rounded-2xl bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all mt-1'>Edit</button>
-                <button onClick={(e) => { handleDelete(e, item.id) }} className='lg:w-15 h-6 lg:text-sm w-11 text-xs rounded-2xl bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all  mt-1'>Delete</button>
+
+                </div>
+                <div className='flex gap-1.5'>
+
+                <button onClick={(e) => handleEdit(e, item.id)} className='lg:w-10 h-8 lg:text-sm w-9 text-xs rounded-2xl bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all mt-1'><img src="src/assets/edit-button-svgrepo-com.svg" alt="edit" className='w-8 h-5 ml-1'/></button>
+                <button onClick={(e) => { handleDelete(e, item.id) }} className='lg:w-10 h-8 lg:text-sm w-11 text-xs rounded-2xl bg-amber-700 hover:bg-amber-600 hover:font-bold transition-all  mt-1'><img src="src/assets/icons8-delete-50.svg" alt="edit" className='w-8 h-5 ml-1'/></button>
+                </div>
               </div>
             })}
 
