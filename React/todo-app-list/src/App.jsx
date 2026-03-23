@@ -85,7 +85,7 @@ function App() {
     <>
       <div className='flex-col flex items-center mt-8 '>
 
-        <div className="bg-amber-400 min-h-100 lg:min-h-200 p-3 flex flex-col items-center w-[90vw] lg:w-[60vw] rounded-3xl">
+        <div className="bg-amber-300 min-h-100 lg:min-h-200 p-3 flex flex-col items-center w-[90vw] lg:w-[60vw] rounded-3xl">
           <h1 className='text-2xl text-center mb-7 font-bold'>Todo List</h1>
           
           <div className='flex flex-col gap-2 justify-center items-center'>
