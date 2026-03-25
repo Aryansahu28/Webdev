@@ -9,7 +9,6 @@ let conn = mongoose.connect("mongodb://localhost:27017/Blog");
 
 
 
-
 app.get('/', (req, res) => {
   const todo = new Todo({
     title: 'Awesome Post!',
