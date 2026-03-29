@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.text-security {
+  -webkit-text-security: disc; /* For Safari/Chrome on iOS */
+  text-security: disc;         /* Standard property (limited support) */
+  /* Fallback/alternative methods if needed */
+  font-family: text-security-disc, sans-serif; /* Use a specific font if possible */
+}

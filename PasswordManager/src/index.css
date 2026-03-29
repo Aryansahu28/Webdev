@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
 body{
-    background-color: darkred;
+    background-color: #1F4529;
+}
+
+nav{
+    background-color: #47663B;
 }
