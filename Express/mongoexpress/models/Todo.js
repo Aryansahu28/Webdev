@@ -11,7 +11,7 @@ const blogSchema = new Schema({
   comments: [{
     user: String,
     content: String,
-    votes: Number
+    votes: Number,
   }]
 }, {
   timestamps: true
